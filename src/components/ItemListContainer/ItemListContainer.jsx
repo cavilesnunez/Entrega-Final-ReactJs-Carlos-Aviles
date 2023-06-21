@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import ItemList from '../ItemList/ItemList'
 import { useState, useEffect } from 'react'
 import { pedirDatos } from '../../helpers/pedirDatos'
@@ -44,4 +45,20 @@ const ItemListContainer = () => {
     )
 }
 
+=======
+
+
+const ItemListContainer = ({mensaje}) => {
+
+return(
+    <div className="">
+        <h2 className="">Item List Container</h2>
+        <hr />
+
+        <p className="">{mensaje}</p>
+    </div>
+)
+
+}
+>>>>>>> 4ea478a58f83fdc4c55d670fd11b24fd937b8773
 export default ItemListContainer

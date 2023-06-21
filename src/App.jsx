@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Header from "./components/Header/Header"
 import Blog from "./components/Blog/Blog"
 import About from "./components/About/About"
@@ -23,6 +24,21 @@ function App() {
           <Route path="*" element={ <Error404 /> }  />
         </Routes>
     </BrowserRouter>
+=======
+import Nav from "./components/Nav/Nav"
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
+
+
+function App() {
+  return (
+    <>
+    <div className="bg-zinc-200 w-full h-screen " >
+
+    <Nav />
+    <ItemListContainer mensaje="Hola Mundo"/>
+    </div>
+    </>
+>>>>>>> 4ea478a58f83fdc4c55d670fd11b24fd937b8773
   )
 }
 
