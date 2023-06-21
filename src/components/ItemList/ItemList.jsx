@@ -8,8 +8,8 @@ const ItemList = ({items}) => {
         <div>
             <h2 className="text-center text-2xl font-semibold mt-3">Productos</h2>
             <hr/>
-
-            <div className='row'>
+            {/* Clase de tailwind para el grid de produtos */}
+            <div className="m-8 grid lg:grid-cols-3 gap-10 ">
                 {
                     // items.map((prod) => <ItemCard key={prod.id} item={prod}/>)
                     items.map((prod) => <ItemCard key={prod.id} {...prod}/>)

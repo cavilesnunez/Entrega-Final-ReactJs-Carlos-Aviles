@@ -34,7 +34,7 @@ const ItemListContainer = () => {
                         : productos
 
     return (
-        <div className="container my-5">
+        <div className="">
             {
                 loading
                     ? <h2>Cargando...</h2>

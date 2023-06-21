@@ -5,12 +5,12 @@ import { Link } from "react-router-dom"
 const ItemCard = ({id, nombre, precio, descripcion, img}) => {
 
     return (
-        <div>
+        <div className="">
 
-        <div className='flex flex-wrap  max-w-sm rounded overflow-hidden shadow-lg'>
-            <div className="px-6 py-4">
+        <div className="">
+            <div className="">
                 <h4 className="font-bold text-xl mb-2">{nombre}</h4>
-                <img className="w-full" src={img} alt={nombre}/>
+                <img className="h-48 w-96 rounded-lg " src={img} alt={nombre}/>
                 <p className="text-gray-700 text-base" >{descripcion}</p>
                 <p className="text-gray-700 text-base" >Precio: ${precio}</p>
                 <div className=" py-4">
