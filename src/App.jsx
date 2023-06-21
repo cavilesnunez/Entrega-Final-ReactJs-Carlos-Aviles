@@ -3,11 +3,8 @@ import Header from "./components/Header/Header"
 import Blog from "./components/Blog/Blog"
 import About from "./components/About/About"
 import Contact from "./components/Contact/Contact"
-import Home from "./components/Home"
 import Error404 from "./components/Error404/Error404"
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
-import { BrowserRouter,Routes, Route } from "react-router-dom"
 
 function App() {
   return (
@@ -28,12 +25,10 @@ function App() {
 import Nav from "./components/Nav/Nav"
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 
+        {/* <Footer /> */}
 
-function App() {
-  return (
-    <>
-    <div className="bg-zinc-200 w-full h-screen " >
-
+    </BrowserRouter>
+   
     <Nav />
     <ItemListContainer mensaje="Hola Mundo"/>
     </div>
@@ -43,5 +38,3 @@ function App() {
 }
 
 export default App
-
-
