@@ -8,7 +8,7 @@ const ItemCard = ({id, nombre, precio, descripcion, img}) => {
         <div className="">
 
         <div className="">
-            <div className="">
+            <div className="max-w-sm rounded overflow-hidden shadow-lg">
                 <h4 className="font-bold text-xl mb-2">{nombre}</h4>
                 <img className="h-48 w-96 rounded-lg " src={img} alt={nombre}/>
                 <p className="text-gray-700 text-base" >{descripcion}</p>

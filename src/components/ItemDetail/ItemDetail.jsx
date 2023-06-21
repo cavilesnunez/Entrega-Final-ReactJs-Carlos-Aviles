@@ -48,10 +48,10 @@ const ItemDetail = ({id, nombre, precio, category, descripcion, img, stock}) => 
 
 
     return (
-        <div className="h-full text-center container my-5">
+        <div className="h-full text-center container my-5 rounded-lg overflow-hidden shadow-lg">
             <h2 className="font-bold text-xl mb-2">{nombre}</h2>
 
-            <img className="mx-auto rounded-md" src={img} alt={nombre}/>
+            <img className="mx-auto rounded-lg" src={img} alt={nombre}/>
             <p className="text-gray-700 text-base">{descripcion}</p>
 
             <h4 className="font-bold text-xl mb-2">Precio: ${precio}</h4>
@@ -71,7 +71,7 @@ const ItemDetail = ({id, nombre, precio, category, descripcion, img, stock}) => 
             />
 
             <hr/>
-            <button onClick={handleVolver} className="btn btn-primary">Volver</button>
+            <button onClick={handleVolver} className="py-2 px-4 bg-blue-900 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">Volver</button>
         </div>
     )
 }
