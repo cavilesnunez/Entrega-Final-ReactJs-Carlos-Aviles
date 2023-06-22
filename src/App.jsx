@@ -8,6 +8,7 @@ import Contact from "./components/Contact/Contact"
 import Error404 from "./components/Error404/Error404"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
 
+
 function App() {
 
   return (
@@ -17,6 +18,7 @@ function App() {
         <Header />
      
         <Routes>
+          {/* <Route path="/" element={<LandingPage />} /> */}
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/productos/:categoryId" element={<ItemListContainer />} />
           <Route path="/detail/:itemId" element={<ItemDetailContainer />}/>

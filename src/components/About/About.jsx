@@ -3,7 +3,7 @@ import imgabout from "/kunai.jpg"
 const About = () => {
   return (
     <div>
-            <h2 className="text-center text-2xl font-semibold mt-3">About</h2>
+            <h2 className="text-center text-4xl font-semibold mt-3">About</h2>
             <hr/>
 
             <div className="py-16 bg-white">  
