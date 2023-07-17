@@ -3,18 +3,18 @@
         "id": 1,
         "img": "https://kbd.news/pic/2022/107/1805.jpg",
         "nombre": "42Azalia",
-        "descripcion":"Teclado mecánico personalizado, kit con electrónica.",
+        "descripcion":"Teclado mecánico personalizado, kit con electrónica analogico.",
         "precio": 1500,
-        "category": "small",
+        "category": "Pequeño",
         "stock": 10
     },
     {
         "id": 2,
         "img": "https://kbd.news/pic/2022/71/1334.jpg",
         "nombre": "Banime40",
-        "descripcion":"Teclado mecánico personalizado, kit con electrónica.",
+        "descripcion":"Teclado mecánico personalizado, kit con electrónica digital.",
         "precio": 1850,
-        "category": "small",
+        "category": "Pequeño",
         "stock": 10
     },
     {
@@ -23,7 +23,7 @@
         "nombre": "Beyblock20",
         "descripcion":"Teclado mecánico personalizado, kit con electrónica.",
         "precio": 1350,
-        "category": "medium",
+        "category": "Mediano",
         "stock": 10
     },
     {
@@ -32,7 +32,7 @@
         "nombre": "Ffkb with led ring",
         "descripcion":"Teclado mecánico personalizado, kit con electrónica.",
         "precio": 2100,
-        "category": "medium",
+        "category": "Mediano",
         "stock": 10
     },
     {
@@ -41,7 +41,7 @@
         "nombre": "Freaku4x",
         "descripcion":"Teclado mecánico personalizado, kit con electrónica.",
         "precio": 1950,
-        "category": "medium",
+        "category": "Mediano",
         "stock": 10
     },
     {
@@ -50,7 +50,7 @@
         "nombre": "Keezy boost40",
         "descripcion":"Teclado mecánico personalizado, kit con electrónica.",
         "precio": 2300,
-        "category": "small",
+        "category": "Pequeño",
         "stock": 10
     },
     {
@@ -59,7 +59,7 @@
         "nombre": "Kunai",
         "descripcion":"Teclado mecánico personalizado, kit con electrónica.",
         "precio": 1740,
-        "category": "small",
+        "category": "Pequeño",
         "stock": 10
     }
     ,
@@ -69,7 +69,7 @@
         "nombre": "Dilemma v2",
         "descripcion":"Teclado mecánico personalizado, kit con electrónica.",
         "precio": 3550,
-        "category": "big",
+        "category": "Grande",
         "stock": 10
     }
 ]

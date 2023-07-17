@@ -1,29 +1,15 @@
-import { useState } from "react"
+import { useContext, useState, useMemo } from "react"
 import ItemCount from "../ItemCount/ItemCount"
-import SelectTalle from "../SelectTalle/SelectTalle"
 import { Link, useNavigate } from "react-router-dom"
+import { CartContext } from "../../context/CartContext"
 
 
-
-const talles = [
-    {
-        value: "S",
-        label: "Small"
-    },
-    {
-        value: "M",
-        label: "Medium"
-    },
-    {
-        value: "L",
-        label: "Large"
-    },
-]
 
 const ItemDetail = ({id, nombre, precio, category, descripcion, img, stock}) => {
-    const [cantidad, setCantidad] = useState(1)
-    const [talle, setTalle] = useState(null)
 
+    const { agregarAlCarrito, isInCart } = useContext(CartContext)
+
+    const [cantidad, setCantidad] = useState(1)
     const navigate = useNavigate()
 
     const handleAgregar = () => {
@@ -35,10 +21,10 @@ const ItemDetail = ({id, nombre, precio, category, descripcion, img, stock}) => 
             descripcion, 
             img, 
             stock, 
-            cantidad, 
-            talle
+            cantidad
         }
-        console.log(item)
+        
+        agregarAlCarrito(item)
     }
 
     
@@ -46,34 +32,56 @@ const ItemDetail = ({id, nombre, precio, category, descripcion, img, stock}) => 
         navigate(-1)
     }
 
+    const fecha = useMemo(() => new Date().toLocaleString(), [cantidad])
+
+
 
     return (
-        <div className="h-full text-center container my-5 rounded-lg overflow-hidden shadow-lg">
-            <h2 className="font-bold text-xl mb-2">{nombre}</h2>
+      <div className="h-full text-center container my-4 rounded-lg overflow-hidden shadow-lg">
+        <h2 className="font-bold text-xl mb-1">{nombre}</h2>
 
-            <img className="mx-auto rounded-lg" src={img} alt={nombre}/>
-            <p className="text-gray-700 text-base">{descripcion}</p>
+        <img
+          className="mx-auto rounded-lg h-1/6 w-2/6"
+          src={img}
+          alt={nombre}
+        />
 
-            <h4 className="font-bold text-xl mb-2">Precio: ${precio}</h4>
-            <br/>
-            <small className="text-gray-700 text-base">categoría: {category}</small>
+        <div className=" m-1">
+          <p className="text-gray-700 text-base mt-1">{descripcion}</p>
 
-            <SelectTalle 
-                setSelect={setTalle}
-                opciones={talles}
-            />
+          <h4 className="font-bold text-xl mb-2">Precio: ${precio}</h4>
 
-            <ItemCount 
-                max={stock}
-                cantidad={cantidad}
-                setCantidad={setCantidad}
-                handleAgregar={handleAgregar}
-            />
-
-            <hr/>
-            <button onClick={handleVolver} className="py-2 px-4 bg-blue-900 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">Volver</button>
+          <small className="text-gray-700 text-base">
+            categoría: {category}
+          </small>
         </div>
-    )
+        <br />
+
+        {isInCart(id) ? (
+          <Link
+            className="ml-4 mt-2 py-1.5 px-3 hover:no-underline bg-blue-900 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+            to="/cart"
+          >
+            Terminar mi compra
+          </Link>
+        ) : (
+          <ItemCount
+            max={stock}
+            cantidad={cantidad}
+            setCantidad={setCantidad}
+            handleAgregar={handleAgregar}
+          />
+        )}
+
+        <hr className="m-4" />
+        <button
+          onClick={handleVolver}
+          className="py-2 px-4 bg-blue-900 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+        >
+          Volver
+        </button>
+      </div>
+    );
 }
 
 export default ItemDetail
